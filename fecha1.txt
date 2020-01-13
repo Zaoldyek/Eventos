@@ -1,0 +1,5 @@
+Inicio del Curso Patrones de Diseño,26/12/2019 17:30:00
+Año Nuevo,01/01/2020 17:30:00
+Dia de la madre,10/05/2019 17:30:00
+Hoy,13/01/2020 17:30:00
+Inicio de SOLID,13/01/2020 16:30:00

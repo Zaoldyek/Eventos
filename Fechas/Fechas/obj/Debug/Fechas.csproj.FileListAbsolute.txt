@@ -1,0 +1,7 @@
+C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\bin\Debug\Fechas.exe.config
+C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\bin\Debug\Fechas.exe
+C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\bin\Debug\Fechas.pdb
+C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.csprojAssemblyReference.cache
+C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.csproj.CoreCompileInputs.cache
+C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.exe
+C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.pdb
