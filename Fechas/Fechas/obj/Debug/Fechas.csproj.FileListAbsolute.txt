@@ -5,3 +5,10 @@ C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.csprojAss
 C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.csproj.CoreCompileInputs.cache
 C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.exe
 C:\Users\antonio.guillemin\source\repos\Fechas\Fechas\obj\Debug\Fechas.pdb
+C:\Eventos\Eventos\Fechas\Fechas\bin\Debug\Fechas.exe.config
+C:\Eventos\Eventos\Fechas\Fechas\bin\Debug\Fechas.exe
+C:\Eventos\Eventos\Fechas\Fechas\bin\Debug\Fechas.pdb
+C:\Eventos\Eventos\Fechas\Fechas\obj\Debug\Fechas.csprojAssemblyReference.cache
+C:\Eventos\Eventos\Fechas\Fechas\obj\Debug\Fechas.csproj.CoreCompileInputs.cache
+C:\Eventos\Eventos\Fechas\Fechas\obj\Debug\Fechas.exe
+C:\Eventos\Eventos\Fechas\Fechas\obj\Debug\Fechas.pdb

@@ -43,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalcularTiempo.cs" />
+    <Compile Include="ConvertirPositivo.cs" />
+    <Compile Include="ConvertirPositivoService.cs" />
+    <Compile Include="Diferencia.cs" />
+    <Compile Include="Imprimir.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propiedades.cs" />
+    <Compile Include="ValidarFechas.cs" />
+    <Compile Include="ValidarFechasService.cs" />
+    <Compile Include="ValidarTiempo.cs" />
+    <Compile Include="ValidarTiempoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

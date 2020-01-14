@@ -10,62 +10,25 @@ namespace Fechas
     {
         static void Main(string[] args)
         {
-           
-          Fechas();
-            
-        }
-        public static void Fechas()
-        {
-            string cText="";
+            ValidarFechasService validarFechasService = new ValidarFechasService();
+            ConvertirPositivoService convertirPositivoService = new ConvertirPositivoService();
+            ValidarTiempoService validarTiempo = new ValidarTiempoService();
             string line;
             System.IO.StreamReader file = new System.IO.StreamReader(@"C:\fecha1.txt");
             while ((line = file.ReadLine()) != null)
             {
-                cText = line;
-                string[] lstDatos = cText.Split(',');
+                string[] lstDatos = line.Split(',');
                 DateTime dtDate = Convert.ToDateTime(lstDatos[1]);
                 DateTime dtHoy = DateTime.Now;
+                string cNombre = lstDatos[0];
 
-                if (dtDate <= dtHoy)
-                {
-                    string cConcepto = CalcularTiempo(dtDate, dtHoy, 1);
-                    Console.WriteLine(lstDatos[0] + " ocurrio hace " + cConcepto);
-                }
-                else
-                {
-                    string cConcepto = CalcularTiempo(dtDate, dtHoy, 2);
-                    Console.WriteLine(lstDatos[0] + " ocurrira dentro de " + cConcepto);
-                }
-               
+                Diferencia diferencia = new Diferencia(dtHoy, dtDate, cNombre, validarFechasService, convertirPositivoService, validarTiempo);
+
+                Imprimir main = new Imprimir();
+                main.imprimir(cNombre,diferencia);
+                
             }
             Console.Read();
-        }
-        public static string CalcularTiempo(DateTime _dtInput, DateTime _dtHoy, int _iTipo)
-        {
-            string cTexto = "";
-            TimeSpan tsDiferencia;
-            int iDay = 0;
-            if (_iTipo == 1)
-            {
-                tsDiferencia = _dtHoy - _dtInput;
-            }
-            else
-            {
-                tsDiferencia = _dtInput - _dtHoy;
-            }
-            iDay = tsDiferencia.Days;
-            cTexto = iDay + " Dias";
-            if (iDay >= 24) {
-                cTexto = (tsDiferencia.Days / 24 )+" Meses";
-            }
-            if (iDay == 0) {
-                cTexto = tsDiferencia.Hours + " Horas";
-            }
-            if (tsDiferencia.Hours == 0) {
-                cTexto = tsDiferencia.Minutes + " Minutos";
-            }
-
-            return cTexto;
         }
     }
 }
