@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fechas
 {
-    class ConvertirPositivoService:ConvertirPositivo
+    public class ConvertirPositivoService:ConvertirPositivo
     {
         public int ConvertiraPositivo(int _iEntero)
         {

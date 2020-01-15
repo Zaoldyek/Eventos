@@ -8,6 +8,6 @@ namespace Fechas
 {
     public interface ValidarTiempo
     {
-        void ValidarTiempo(TimeSpan _tsDiferencia,Propiedades propiedades);
+        void PrepararMensajePosterior(TimeSpan _tsDiferencia,Propiedades propiedades,ConvertirPositivo convertirPositivo);
     }
 }

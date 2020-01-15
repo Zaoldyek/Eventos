@@ -17,7 +17,8 @@ namespace Fechas
         public ConvertirPositivo convertirPositivo { get; set; }
         public ValidarTiempo ValidarTiempo { get; set; }
 
-        public Propiedades(DateTime _dtHoy, DateTime _dtInput, string _cNombre, IValidarFechas _validarFechas,ConvertirPositivo _convertirPositivo,ValidarTiempo _validarTiempo)
+        public Propiedades(){}
+        public Propiedades(DateTime _dtHoy, DateTime _dtInput, string _cNombre, IValidarFechas _validarFechas, ConvertirPositivo _convertirPositivo,ValidarTiempo _validarTiempo)
         {
             this.dtHoy = _dtHoy;
             this.dtInput = _dtInput;
@@ -35,9 +36,8 @@ namespace Fechas
             cTextoAux = validarFechas.PrepararMensajePrevio(dtHoy, dtInput, cNombre);
             tsDiferencia = dtHoy - dtInput;
 
-            ValidarTiempo.ValidarTiempo(tsDiferencia,this);
+            ValidarTiempo.PrepararMensajePosterior(tsDiferencia,this, convertirPositivo);
             
-            this.iTiempo = convertirPositivo.ConvertiraPositivo(this.iTiempo);
             cTexto = cTextoAux + this.iTiempo + this.cTexto; 
             Console.WriteLine(cTexto);
         }

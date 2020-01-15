@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Fechas
 {
-    class Imprimir
+    interface ILeerArchivo
     {
-        public void imprimir(Diferencia _diferencias)
-        {
-            _diferencias.CalcularTiempoRestante();
-        }
+        List<string> LeerArchivo(string _cRuta);
     }
 }

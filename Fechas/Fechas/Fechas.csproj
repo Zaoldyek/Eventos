@@ -47,7 +47,9 @@
     <Compile Include="ConvertirPositivo.cs" />
     <Compile Include="ConvertirPositivoService.cs" />
     <Compile Include="Diferencia.cs" />
+    <Compile Include="ILeerArchivo.cs" />
     <Compile Include="Imprimir.cs" />
+    <Compile Include="LeerArchivoService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Propiedades.cs" />

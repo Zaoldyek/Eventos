@@ -56,8 +56,11 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="ConvertirPositivoServiceUTests.cs" />
+    <Compile Include="LeerArchivoServiceUTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidarFechasServiceUTests.cs" />
+    <Compile Include="ValidarTiempoServiceUTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

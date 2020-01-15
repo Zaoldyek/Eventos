@@ -6,31 +6,37 @@ using System.Threading.Tasks;
 
 namespace Fechas
 {
-    class ValidarTiempoService : ValidarTiempo
+    public class ValidarTiempoService : ValidarTiempo
     {
-        public void ValidarTiempo(TimeSpan _tsDiferencia, Propiedades propiedades)
+        public void PrepararMensajePosterior(TimeSpan _tsDiferencia, Propiedades propiedades,ConvertirPositivo convertirPositivo)
         {
-            int iDay = _tsDiferencia.Days;
-            int iHora = _tsDiferencia.Hours;
-            int iMinutos = _tsDiferencia.Minutes;
+            int iDay = convertirPositivo.ConvertiraPositivo(_tsDiferencia.Days);
+            int iHora = convertirPositivo.ConvertiraPositivo(_tsDiferencia.Hours);
+            int iMinutos = convertirPositivo.ConvertiraPositivo(_tsDiferencia.Minutes);
 
-            propiedades.cTexto = iDay + " Dias";
+            AsignarValores(iDay, "Días",propiedades);
 
             if (iDay >= 30)
             {
-                propiedades.iTiempo = iDay / 30;
-                propiedades.cTexto = " Meses";
+                AsignarValores((iDay / 30), "Meses", propiedades);
             }
-            if (iDay == 0)
+            else
             {
-                propiedades.iTiempo = iHora;
-                propiedades.cTexto = " Horas";
+                if (iDay == 0)
+                {
+                    AsignarValores(iHora, "Horas", propiedades);
+                }
+                if (iHora == 0 && iDay == 0)
+                {
+                    AsignarValores(iMinutos, "Minutos", propiedades);
+                }
             }
-            if (iHora == 0 && iDay == 0)
-            {
-                propiedades.iTiempo = iMinutos;
-                propiedades.cTexto = " Minutos";
-            }
+        }
+
+        private void AsignarValores(int _iTiempo, string _cMensaje, Propiedades _lPropiedad)
+        {
+            _lPropiedad.iTiempo = _iTiempo;
+            _lPropiedad.cTexto = $" {_cMensaje}";
         }
     }
 }
